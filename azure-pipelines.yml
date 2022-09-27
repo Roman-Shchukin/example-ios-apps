@@ -10,6 +10,9 @@ pool:
   vmImage: macOS-latest
 
 steps:
+- task: CmdLine@2
+  inputs:
+    script: 'pod init'
 - task: CocoaPods@0
   inputs:
     forceRepoUpdate: false
